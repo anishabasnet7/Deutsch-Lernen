@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tense</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+<div class="wrap">
+  <h2 class="section-title">Tense <span class="tag tag-a1">A1</span><span class="tag tag-a2">A2</span></h2>
+  <div class="card">
+    <h3>Perfekt (conversational past) <span class="tag tag-a1">A1</span></h3>
+    <div class="rule-box">haben/sein (conjugated) + past participle (at the end). Most verbs use haben. Verbs of movement or change of state use sein.</div>
+    <table>
+      <tr><th>Verb type</th><th>Formation</th><th>Example</th></tr>
+      <tr><td>Regular</td><td><span class="de">ge- + stem + -t</span></td><td><span class="de">gemacht, gespielt</span></td></tr>
+      <tr><td>Irregular</td><td><span class="de">ge- + stem change + -en</span></td><td><span class="de">gegessen, geschrieben</span></td></tr>
+      <tr><td>Separable</td><td><span class="de">prefix + ge + stem</span></td><td><span class="de">aufgemacht, angerufen</span></td></tr>
+      <tr><td>Inseparable (be-, er-, ver-...)</td><td>no <span class="de">ge-</span></td><td><span class="de">besucht, erklärt, verstanden</span></td></tr>
+      <tr><td>Verbs ending -ieren</td><td>no <span class="de">ge-</span></td><td><span class="de">studiert, telefoniert</span></td></tr>
+    </table>
+   <div class="grid2" style="margin-top:.75rem">
+        <div class="example"><span class="de">Ich habe das Buch gelesen.</span><br><span class="en">I (have) read the book.</span></div>
+        <div class="example"><span class="de">Sie ist nach Berlin gefahren.</span><br><span class="en">She went (has gone) to Berlin.</span></div>
+      </div>
+    </div>
+  <div class="card">
+    <h3>sein-verbs in Perfekt — movement & change of state</h3>
+    <div class="grid3">
+      <div><span class="de">gehen → gegangen</span></div>
+      <div><span class="de">fahren → gefahren</span></div>
+      <div><span class="de">kommen → gekommen</span></div>
+      <div><span class="de">fliegen → geflogen</span></div>
+      <div><span class="de">laufen → gelaufen</span></div>
+      <div><span class="de">aufstehen → aufgestanden</span></div>
+      <div><span class="de">einschlafen → eingeschlafen</span></div>
+      <div><span class="de">werden → geworden</span></div>
+      <div><span class="de">sein → gewesen</span></div>
+      <div><span class="de">bleiben → geblieben</span></div>
+      <div><span class="de">passieren → passiert</span></div>
+      <div><span class="de">sterben → gestorben</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Präteritum (written past) <span class="tag tag-a2">A2</span></h3>
+    <p>Mostly used in written German, news, and literature. At A2 level, know <span class="de">sein, haben</span>, and modal verbs in Präteritum.</p>
+    <table>
+      <tr><th>Infinitive</th><th class="de">ich</th><th class="de">du</th><th class="de">er/sie</th><th class="de">wir/sie</th></tr>
+      <tr><td class="de">sein</td><td class="de">war</td><td class="de">warst</td><td class="de">war</td><td class="de">waren</td></tr>
+      <tr><td class="de">haben</td><td class="de">hatte</td><td class="de">hattest</td><td class="de">hatte</td><td class="de">hatten</td></tr>
+      <tr><td class="de">können</td><td class="de">konnte</td><td class="de">konntest</td><td class="de">konnte</td><td class="de">konnten</td></tr>
+      <tr><td class="de">müssen</td><td class="de">musste</td><td class="de">musstest</td><td class="de">musste</td><td class="de">mussten</td></tr>
+      <tr><td class="de">wollen</td><td class="de">wollte</td><td class="de">wolltest</td><td class="de">wollte</td><td class="de">wollten</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h3>Futur I <span class="tag tag-a2">A2</span></h3>
+    <div class="rule-box">werden (conjugated) + infinitive at the end. In spoken German, present tense + time word is more common.</div>
+    <div class="grid2">
+      <div class="example"><span class="de">Ich werde morgen lernen.</span><br><span class="en">I will study tomorrow.</span></div>
+      <div class="example"><span class="de">Morgen lerne ich.</span><br><span class="en">Tomorrow I am studying. (spoken)</span></div>
+    </div>
+  </div>
+</div>  <!-- wrap end -->
+
+<div id="footer"></div>
+<script>
+function load(id, file) {
+  return fetch(file)
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById(id).innerHTML = html;
+    });
+}
+
+load("navbar", "navbar.html")
+  .then(() => {
+    // highlight active link
+    const current = location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      if (link.getAttribute("href") === current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+load("footer", "footer.html");
+</script>
+</body>
+</html>

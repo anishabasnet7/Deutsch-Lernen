@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Order</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+<div class="wrap">
+  <h2 class="section-title">Word order (Satzstellung) <span class="tag tag-a1">A1</span><span class="tag tag-a2">A2</span></h2>
+  <div class="card">
+    <h3>The V2 rule — verb always in position 2</h3>
+    <div class="example"><span class="de">Ich gehe heute ins Kino.</span> <span class="en">— I / go / today / to the cinema.</span></div>
+    <div class="example"><span class="de">Heute gehe ich ins Kino.</span> <span class="en">— Today / go / I / ...</span></div>
+    <div class="example"><span class="de">Ins Kino gehe ich heute.</span> <span class="en">— To the cinema / go / I / today.</span></div>
+  </div>
+  <div class="card">
+    <h3>TEKAMOLO — Word order for adverbs <span class="tag tag-a2">A2</span></h3>
+    <table>
+      <tr><th>Temporal</th><th>Time</th></tr>
+      <tr><th>Ergänzung</th><th>Accusative or Dativ</th></tr>
+      <tr><th>Kausal</th><th>Reason</th></tr>
+      <tr><th>Art & Weise</th><th>Manner how?</th></tr>
+      <tr><th>Modal</th><th>Under what condition</th></tr>
+      <tr><th>Ort/Location</th><th>Place/Location</th></tr>
+    </table>
+    <div class="example" style="margin-top:.5rem"><span class="de">Ich habe <strong>h</strong>eute <strong>T</strong> <strong>m</strong>einem <strong>F</strong>reund <strong>E</strong> <strong>w</strong>egen <strong>d</strong>es <strong>W</strong>etters <strong>K</strong> <strong>s</strong>chnell <strong>A</strong> <strong>i</strong>m <strong>P</strong>ark <strong>LO</strong> geholfen.</span><br><span class="en"></span></div>
+    <div class="rule-box"><strong>Te</strong>mporal → <strong>Ka</strong>usal → <strong>Mo</strong>dal → <strong>Lo</strong>kal<br>Time → Reason → Manner → Place</div>
+    <table>
+      <tr><th>Te (wann?)</th><th>Ka (warum?)</th><th>Mo (wie?)</th><th>Lo (wo/wohin?)</th></tr>
+      <tr><td class="de">morgen</td><td class="de">wegen der Arbeit</td><td class="de">mit dem Auto</td><td class="de">nach Berlin</td></tr>
+      <tr><td class="de">jeden Tag</td><td class="de">—</td><td class="de">zu Fuß</td><td class="de">in die Schule</td></tr>
+    </table>
+    <div class="example" style="margin-top:.5rem"><span class="de">Ich fahre morgen wegen der Arbeit mit dem Auto nach Berlin.</span><br><span class="en">I drive tomorrow / because of work / by car / to Berlin.</span></div>
+    <div class="warn">You don't need all four every sentence — use only what's relevant. But keep the Te→Ka→Mo→Lo order when multiple are used.</div>
+  </div>
+  <div class="grid2">
+      <div class="card">
+        <h3>Questions — Verb first</h3>
+        <p>Yes/no questions start with the verb.</p>
+        <div class="example"><span class="de">Gehst du heute zur Schule?</span><br><span class="en">Are you going to school today?</span></div>
+        <p style="margin-top:.5rem">W-questions start with a question word.</p>
+        <div class="example"><span class="de">Wo wohnst du? Warum lernst du Deutsch?</span></div>
+      </div>
+    </div>
+</div>  <!-- wrap end -->
+ 
+<div id="footer"></div>
+<script>
+function load(id, file) {
+  return fetch(file)
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById(id).innerHTML = html;
+    });
+}
+
+load("navbar", "navbar.html")
+  .then(() => {
+    // highlight active link
+    const current = location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      if (link.getAttribute("href") === current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+load("footer", "footer.html");
+</script>
+</body>
+</html>

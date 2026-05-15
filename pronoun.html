@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronoun</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="navbar"></div>
+<div class="wrap">
+    <h2 class="section-title">Pronoun <span class="tag tag-a1">A1</span><span class="tag tag-a2">A2</span></h2>
+    <div class="card">
+      <h3>Personal pronouns — all cases</h3>
+      <table>
+        <tr><th>Nominative</th><th>Accusative</th><th>Dative</th><th>Meaning</th></tr>
+        <tr><td class="de">ich</td><td class="de">mich</td><td class="de">mir</td><td class="en">I / me</td></tr>
+        <tr><td class="de">du</td><td class="de">dich</td><td class="de">dir</td><td class="en">you (informal)</td></tr>
+        <tr><td class="de">er</td><td class="de">ihn</td><td class="de">ihm</td><td class="en">he / him</td></tr>
+        <tr><td class="de">sie</td><td class="de">sie</td><td class="de">ihr</td><td class="en">she / her</td></tr>
+        <tr><td class="de">es</td><td class="de">es</td><td class="de">ihm</td><td class="en">it</td></tr>
+        <tr><td class="de">wir</td><td class="de">uns</td><td class="de">uns</td><td class="en">we / us</td></tr>
+        <tr><td class="de">ihr</td><td class="de">euch</td><td class="de">euch</td><td class="en">you (pl.)</td></tr>
+        <tr><td class="de">sie</td><td class="de">sie</td><td class="de">ihnen</td><td class="en">they / them</td></tr>
+        <tr><td class="de">Sie</td><td class="de">Sie</td><td class="de">Ihnen</td><td class="en">you (formal)</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>Possessive adjectives <span class="tag tag-a1">A1</span></h3>
+      <table>
+        <tr><th>Pronoun</th><th>Possessive</th><th>Example</th></tr>
+        <tr><td class="de">ich</td><td class="de">mein-</td><td><span class="de">mein Buch, meine Tasche</span></td></tr>
+        <tr><td class="de">du</td><td class="de">dein-</td><td><span class="de">dein Haus, deine Mutter</span></td></tr>
+        <tr><td class="de">er/es</td><td class="de">sein-</td><td><span class="de">sein Auto</span></td></tr>
+        <tr><td class="de">sie (she)</td><td class="de">ihr-</td><td><span class="de">ihr Vater</span></td></tr>
+        <tr><td class="de">wir</td><td class="de">unser-</td><td><span class="de">unser Lehrer</span></td></tr>
+        <tr><td class="de">ihr</td><td class="de">euer / eur-</td><td><span class="de">eure Schule</span></td></tr>
+        <tr><td class="de">sie/Sie</td><td class="de">ihr- / Ihr-</td><td><span class="de">ihr Hund / Ihr Name</span></td></tr>
+      </table>
+      <div class="warn">Possessive adjectives are declined like <span class="de">ein/kein</span> — they change endings based on the gender and case of the noun they modify.</div>
+    </div>
+    <div class="card">
+      <h3>Reflexive pronouns <span class="tag tag-a2">A2</span></h3>
+      <table>
+        <tr><th>Pronoun</th><th>Accusative refl.</th><th>Dative refl.</th></tr>
+        <tr><td class="de">ich</td><td class="de">mich</td><td class="de">mir</td></tr>
+        <tr><td class="de">du</td><td class="de">dich</td><td class="de">dir</td></tr>
+        <tr><td class="de">er/sie/es</td><td class="de">sich</td><td class="de">sich</td></tr>
+        <tr><td class="de">wir</td><td class="de">uns</td><td class="de">uns</td></tr>
+        <tr><td class="de">ihr</td><td class="de">euch</td><td class="de">euch</td></tr>
+        <tr><td class="de">sie/Sie</td><td class="de">sich</td><td class="de">sich</td></tr>
+      </table>
+      <div class="example" style="margin-top:.5rem"><span class="de">Ich wasche mich. / Ich wasche mir die Hände.</span><br><span class="en">I wash myself. / I wash my hands.</span></div>
+    </div>
+</div>  <!-- wrap end -->
+ 
+<div id="footer"></div>
+<script>
+function load(id, file) {
+  return fetch(file)
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById(id).innerHTML = html;
+    });
+}
+
+load("navbar", "navbar.html")
+  .then(() => {
+    // highlight active link
+    const current = location.pathname.split("/").pop() || "index.html";
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      if (link.getAttribute("href") === current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+load("footer", "footer.html");
+</script>
+</body>
+</html>
