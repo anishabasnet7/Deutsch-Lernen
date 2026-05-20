@@ -1,7 +1,7 @@
 const CACHE_NAME = "german-app-v2"; // Incremented version to force update
 
 const urlsToCache = [
-  "/",
+  "./",
   "/index.html",
   "/article.html",
   "/gender.html",
