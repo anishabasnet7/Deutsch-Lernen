@@ -21,7 +21,7 @@ const urlsToCache = [
   "/footer.html",
   "/style.css",
   "/manifest.json",
-  "/icon.png" // Include your icon if it exists
+  "/icon.png" 
 ];
 
 self.addEventListener("install", event => {
