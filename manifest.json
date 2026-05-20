@@ -1,7 +1,7 @@
 {
   "name": "German A1–A2",
   "short_name": "Deutsch",
-  "start_url": "/",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
