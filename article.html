@@ -138,6 +138,19 @@ load("navbar", "navbar.html")
   });
 
 load("footer", "footer.html");
+
+//Register Service Worker on this page as well
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js")
+      .then(reg => {
+        console.log("Service Worker active on article.html", reg.scope);
+      })
+      .catch(err => {
+        console.log("Service Worker registration failed on article.html", err);
+      });
+  });
+}
 </script>
 </body>
 </html>
