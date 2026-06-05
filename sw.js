@@ -24,9 +24,7 @@ const STATIC_ASSETS = [
   "icon.png"
 ];
 
-// ----------------------
 // INSTALL
-// ----------------------
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
@@ -38,9 +36,7 @@ self.addEventListener("install", event => {
   self.skipWaiting();
 });
 
-// ----------------------
 // ACTIVATE
-// ----------------------
 self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(keys => {
@@ -58,23 +54,20 @@ self.addEventListener("activate", event => {
   self.clients.claim();
 });
 
-// ----------------------
 // MESSAGE (for update button)
-// ----------------------
 self.addEventListener("message", event => {
   if (event.data && event.data.type === "SKIP_WAITING") {
     self.skipWaiting();
   }
 });
 
-// ----------------------
+
 // FETCH STRATEGY
-// ----------------------
 self.addEventListener("fetch", event => {
   const request = event.request;
   const url = new URL(request.url);
 
-  // 1. HTML → network first (always get latest version)
+  // HTML -> network first (always get latest version)
   if (request.mode === "navigate" || url.pathname.endsWith(".html")) {
     event.respondWith(
       fetch(request).catch(() => caches.match(request))
@@ -82,7 +75,7 @@ self.addEventListener("fetch", event => {
     return;
   }
 
-  // 2. Static assets → cache first, fallback to network
+  // Static assets -> cache first, fallback to network
   event.respondWith(
     caches.match(request).then(cached => {
       if (cached) return cached;
@@ -94,7 +87,7 @@ self.addEventListener("fetch", event => {
         });
 
       }).catch(() => {
-        // offline fallback (optional safety)
+        // offline fallback
         return caches.match("./");
       });
     })
