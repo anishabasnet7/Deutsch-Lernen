@@ -15,6 +15,7 @@ const STATIC_ASSETS = [
   "pronunciation.html",
   "prefix.html",
   "compound.html",
+  "badstate.html",
   "school.html",
   "slang.html",
   "navbar.html",
