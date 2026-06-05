@@ -92,3 +92,8 @@
   border-color: #AFA9EC;
   font-weight: 500;
 }
+
+td.de:hover {
+    background-color: #e8f4fd; /* Light blue highlight on hover */
+    color: #007bff;
+}

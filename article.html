@@ -1,156 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Article</title>
-<link rel="manifest" href="manifest.json">
-<!-- mobile-friendly meta tags -->
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="German App">
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="stylesheet" href="style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article</title>
+    <link rel="manifest" href="manifest.json" />
+    <!-- mobile-friendly meta tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="German App" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-  <div id="navbar"></div>
-  <div class="wrap">
-    <h2 class="section-title">Article with Adjective<span class="tag tag-a1">A1</span><span class="tag tag-a2">A2</span></h2>
-    <div class="rule-box">German has 4 cases: <strong>Nominative</strong> (subject), <strong>Accusative</strong> (direct object), <strong>Dative</strong> (indirect object), <strong>Genitive</strong> (possession — A2).</div>
-    
-    <div class="card">
-      <h3>Definite article — der / die / das</h3>
-      <table>
-        <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural</th><th>Use</th></tr>
-        <tr><td><strong>Nom.</strong></td><td class="de">der gute</td><td class="de">die gute</td><td class="de">das gute</td><td class="de">die guten</td><td class="en">subject</td></tr>
-        <tr><td><strong>Acc.</strong></td><td class="de">den guten</td><td class="de">die gute</td><td class="de">das gute</td><td class="de">die guten</td><td class="en">direct object</td></tr>
-        <tr><td><strong>Dat.</strong></td><td class="de">dem guten</td><td class="de">der guten</td><td class="de">dem guten</td><td class="de">den guten</td><td class="en">indirect object</td></tr>
-        <tr><td><strong>Gen.</strong></td><td class="de">des guten</td><td class="de">der guten</td><td class="de">des guten</td><td class="de">der guten</td><td class="en">possession</td></tr>
-      </table>
-    </div>
-    <div class="card">
-      <h3>Indefinite article — ein / eine / ein</h3>
-      <table>
-        <tr><th>Case</th><th>Masculine</th><th>Feminine</th><th>Neuter</th><th>Plural (kein-)</th></tr>
-        <tr><td><strong>Nom.</strong></td><td class="de">ein guter</td><td class="de">eine gute</td><td class="de">ein gutes</td><td class="de">keine guten</td></tr>
-        <tr><td><strong>Acc.</strong></td><td class="de">einen guten</td><td class="de">eine gute</td><td class="de">ein gutes</td><td class="de">keine guten</td></tr>
-        <tr><td><strong>Dat.</strong></td><td class="de">einem guten</td><td class="de">einer guten</td><td class="de">einem guten</td><td class="de">keinen guten</td></tr>
-        <tr><td><strong>Gen.</strong></td><td class="de">eines guten</td><td class="de">einer guten</td><td class="de">eines guten</td><td class="de">keiner guten</td></tr>
-      </table>
-    </div>
-    <div class="card">
-  <h3>No article — strong adjective declension</h3>
-  <table>
-    <tr>
-      <th>Case</th>
-      <th>Masculine</th>
-      <th>Feminine</th>
-      <th>Neuter</th>
-      <th>Plural</th>
-      <th>Use</th>
-    </tr>
+  <body>
+    <div id="navbar"></div>
+    <div class="wrap">
+      <h2 class="section-title">
+        Article with Adjective<span class="tag tag-a1">A1</span
+        ><span class="tag tag-a2">A2</span>
+      </h2>
+      <div class="rule-box">
+        German has 4 cases: <strong>Nominative</strong> (subject),
+        <strong>Accusative</strong> (direct object),
+        <strong>Dative</strong> (indirect object),
+        <strong>Genitive</strong> (possession — A2).
+      </div>
 
-    <tr>
-      <td><strong>Nom.</strong></td>
-      <td class="de">guter Mann</td>
-      <td class="de">gute Frau</td>
-      <td class="de">gutes Kind</td>
-      <td class="de">gute Männer</td>
-      <td class="en">subject</td>
-    </tr>
+      <div class="card">
+        <h3>Definite article — der / die / das</h3>
+        <table>
+          <tr>
+            <th>Case</th>
+            <th>Masculine</th>
+            <th>Feminine</th>
+            <th>Neuter</th>
+            <th>Plural</th>
+            <th>Use</th>
+          </tr>
+          <tr>
+            <td><strong>Nom.</strong></td>
+            <td class="de">der gute</td>
+            <td class="de">die gute</td>
+            <td class="de">das gute</td>
+            <td class="de">die guten</td>
+            <td class="en">subject</td>
+          </tr>
+          <tr>
+            <td><strong>Acc.</strong></td>
+            <td class="de">den guten</td>
+            <td class="de">die gute</td>
+            <td class="de">das gute</td>
+            <td class="de">die guten</td>
+            <td class="en">direct object</td>
+          </tr>
+          <tr>
+            <td><strong>Dat.</strong></td>
+            <td class="de">dem guten</td>
+            <td class="de">der guten</td>
+            <td class="de">dem guten</td>
+            <td class="de">den guten</td>
+            <td class="en">indirect object</td>
+          </tr>
+          <tr>
+            <td><strong>Gen.</strong></td>
+            <td class="de">des guten</td>
+            <td class="de">der guten</td>
+            <td class="de">des guten</td>
+            <td class="de">der guten</td>
+            <td class="en">possession</td>
+          </tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>Indefinite article — ein / eine / ein</h3>
+        <table>
+          <tr>
+            <th>Case</th>
+            <th>Masculine</th>
+            <th>Feminine</th>
+            <th>Neuter</th>
+            <th>Plural (kein-)</th>
+          </tr>
+          <tr>
+            <td><strong>Nom.</strong></td>
+            <td class="de">ein guter</td>
+            <td class="de">eine gute</td>
+            <td class="de">ein gutes</td>
+            <td class="de">keine guten</td>
+          </tr>
+          <tr>
+            <td><strong>Acc.</strong></td>
+            <td class="de">einen guten</td>
+            <td class="de">eine gute</td>
+            <td class="de">ein gutes</td>
+            <td class="de">keine guten</td>
+          </tr>
+          <tr>
+            <td><strong>Dat.</strong></td>
+            <td class="de">einem guten</td>
+            <td class="de">einer guten</td>
+            <td class="de">einem guten</td>
+            <td class="de">keinen guten</td>
+          </tr>
+          <tr>
+            <td><strong>Gen.</strong></td>
+            <td class="de">eines guten</td>
+            <td class="de">einer guten</td>
+            <td class="de">eines guten</td>
+            <td class="de">keiner guten</td>
+          </tr>
+        </table>
+      </div>
+      <div class="card">
+        <h3>No article — strong adjective declension</h3>
+        <table>
+          <tr>
+            <th>Case</th>
+            <th>Masculine</th>
+            <th>Feminine</th>
+            <th>Neuter</th>
+            <th>Plural</th>
+            <th>Use</th>
+          </tr>
 
-    <tr>
-      <td><strong>Acc.</strong></td>
-      <td class="de">guten Mann</td>
-      <td class="de">gute Frau</td>
-      <td class="de">gutes Kind</td>
-      <td class="de">gute Männer</td>
-      <td class="en">direct object</td>
-    </tr>
+          <tr>
+            <td><strong>Nom.</strong></td>
+            <td class="de">guter Mann</td>
+            <td class="de">gute Frau</td>
+            <td class="de">gutes Kind</td>
+            <td class="de">gute Männer</td>
+            <td class="en">subject</td>
+          </tr>
 
-    <tr>
-      <td><strong>Dat.</strong></td>
-      <td class="de">gutem Mann</td>
-      <td class="de">guter Frau</td>
-      <td class="de">gutem Kind</td>
-      <td class="de">guten Männern</td>
-      <td class="en">indirect object</td>
-    </tr>
+          <tr>
+            <td><strong>Acc.</strong></td>
+            <td class="de">guten Mann</td>
+            <td class="de">gute Frau</td>
+            <td class="de">gutes Kind</td>
+            <td class="de">gute Männer</td>
+            <td class="en">direct object</td>
+          </tr>
 
-    <tr>
-      <td><strong>Gen.</strong></td>
-      <td class="de">guten Mannes</td>
-      <td class="de">guter Frau</td>
-      <td class="de">guten Kindes</td>
-      <td class="de">guter Männer</td>
-      <td class="en">possession</td>
-    </tr>
-  </table>
-</div>
-    <div class="card">
+          <tr>
+            <td><strong>Dat.</strong></td>
+            <td class="de">gutem Mann</td>
+            <td class="de">guter Frau</td>
+            <td class="de">gutem Kind</td>
+            <td class="de">guten Männern</td>
+            <td class="en">indirect object</td>
+          </tr>
+
+          <tr>
+            <td><strong>Gen.</strong></td>
+            <td class="de">guten Mannes</td>
+            <td class="de">guter Frau</td>
+            <td class="de">guten Kindes</td>
+            <td class="de">guter Männer</td>
+            <td class="en">possession</td>
+          </tr>
+        </table>
+      </div>
+      <div class="card">
         <h3>Plural forms <span class="tag tag-a1">A1</span></h3>
         <table>
-        <tr><th>Type</th><th>Singular → Plural</th><th>Example</th></tr>
-        <tr><td>-e ending</td><td>add <span class="de">-e</span></td><td><span class="de">der Tag → die Tage</span></td></tr>
-        <tr><td>umlaut + -e</td><td>umlaut + <span class="de">-e</span></td><td><span class="de">der Stuhl → die Stühle</span></td></tr>
-        <tr><td>-er ending</td><td>add <span class="de">-er</span></td><td><span class="de">das Kind → die Kinder</span></td></tr>
-        <tr><td>-en ending</td><td>add <span class="de">-en / -n</span></td><td><span class="de">die Frau → die Frauen</span></td></tr>
-        <tr><td>unchanged</td><td>same form</td><td><span class="de">der Lehrer → die Lehrer</span></td></tr>
-        <tr><td>-s (foreign words)</td><td>add <span class="de">-s</span></td><td><span class="de">das Auto → die Autos</span></td></tr>
+          <tr>
+            <th>Type</th>
+            <th>Singular → Plural</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td>-e ending</td>
+            <td>add <span class="de">-e</span></td>
+            <td><span class="de">der Tag → die Tage</span></td>
+          </tr>
+          <tr>
+            <td>umlaut + -e</td>
+            <td>umlaut + <span class="de">-e</span></td>
+            <td><span class="de">der Stuhl → die Stühle</span></td>
+          </tr>
+          <tr>
+            <td>-er ending</td>
+            <td>add <span class="de">-er</span></td>
+            <td><span class="de">das Kind → die Kinder</span></td>
+          </tr>
+          <tr>
+            <td>-en ending</td>
+            <td>add <span class="de">-en / -n</span></td>
+            <td><span class="de">die Frau → die Frauen</span></td>
+          </tr>
+          <tr>
+            <td>unchanged</td>
+            <td>same form</td>
+            <td><span class="de">der Lehrer → die Lehrer</span></td>
+          </tr>
+          <tr>
+            <td>-s (foreign words)</td>
+            <td>add <span class="de">-s</span></td>
+            <td><span class="de">das Auto → die Autos</span></td>
+          </tr>
         </table>
+      </div>
+      <div class="card">
+        <h3>Comparative & superlative <span class="tag tag-a2">A2</span></h3>
+        <table>
+          <tr>
+            <th>Adjective</th>
+            <th>Comparative</th>
+            <th>Superlative</th>
+          </tr>
+          <tr>
+            <td class="de">groß (big)</td>
+            <td class="de">größer</td>
+            <td class="de">am größten / der größte</td>
+          </tr>
+          <tr>
+            <td class="de">klein (small)</td>
+            <td class="de">kleiner</td>
+            <td class="de">am kleinsten</td>
+          </tr>
+          <tr>
+            <td class="de">gut (good)</td>
+            <td class="de">besser</td>
+            <td class="de">am besten</td>
+          </tr>
+          <tr>
+            <td class="de">viel (much)</td>
+            <td class="de">mehr</td>
+            <td class="de">am meisten</td>
+          </tr>
+          <tr>
+            <td class="de">gern (gladly)</td>
+            <td class="de">lieber</td>
+            <td class="de">am liebsten</td>
+          </tr>
+        </table>
+        <div class="example">
+          <span class="de"
+            >Berlin ist größer als München. München ist am schönsten.</span
+          ><br /><span class="en"
+            >Berlin is bigger than Munich. Munich is the most beautiful.</span
+          >
+        </div>
+      </div>
     </div>
-    <div class="card">
-    <h3>Comparative & superlative <span class="tag tag-a2">A2</span></h3>
-    <table>
-      <tr><th>Adjective</th><th>Comparative</th><th>Superlative</th></tr>
-      <tr><td class="de">groß (big)</td><td class="de">größer</td><td class="de">am größten / der größte</td></tr>
-      <tr><td class="de">klein (small)</td><td class="de">kleiner</td><td class="de">am kleinsten</td></tr>
-      <tr><td class="de">gut (good)</td><td class="de">besser</td><td class="de">am besten</td></tr>
-      <tr><td class="de">viel (much)</td><td class="de">mehr</td><td class="de">am meisten</td></tr>
-      <tr><td class="de">gern (gladly)</td><td class="de">lieber</td><td class="de">am liebsten</td></tr>
-    </table>
-    <div class="example"><span class="de">Berlin ist größer als München. München ist am schönsten.</span><br><span class="en">Berlin is bigger than Munich. Munich is the most beautiful.</span></div>
-  </div>
-</div>  <!-- wrap end -->
- 
-<div id="footer"></div>
-<script>
-function load(id, file) {
-  return fetch(file)
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById(id).innerHTML = html;
-    });
-}
+    <!-- wrap end -->
 
-load("navbar", "navbar.html")
-  .then(() => {
-    // highlight active link
-    const current = location.pathname.split("/").pop() || "index.html";
-
-    document.querySelectorAll(".nav-link").forEach(link => {
-      if (link.getAttribute("href") === current) {
-        link.classList.add("active");
+    <div id="footer"></div>
+    <script>
+      function load(id, file) {
+        return fetch(file)
+          .then((res) => res.text())
+          .then((html) => {
+            document.getElementById(id).innerHTML = html;
+          });
       }
-    });
-  });
 
-load("footer", "footer.html");
+      load("navbar", "navbar.html").then(() => {
+        // highlight active link
+        const current = location.pathname.split("/").pop() || "index.html";
 
-//Register Service Worker on this page as well
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("sw.js")
-      .then(reg => {
-        console.log("Service Worker active on article.html", reg.scope);
-      })
-      .catch(err => {
-        console.log("Service Worker registration failed on article.html", err);
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          if (link.getAttribute("href") === current) {
+            link.classList.add("active");
+          }
+        });
       });
-  });
-}
-</script>
-</body>
+
+      load("footer", "footer.html");
+
+      //Register Service Worker on this page as well
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("sw.js")
+            .then((reg) => {
+              console.log("Service Worker active on article.html", reg.scope);
+            })
+            .catch((err) => {
+              console.log(
+                "Service Worker registration failed on article.html",
+                err
+              );
+            });
+        });
+      }
+    </script>
+    <script src="script.js?v=1.0"></script>
+  </body>
 </html>

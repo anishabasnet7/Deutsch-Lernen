@@ -1,149 +1,757 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gender</title>
-<link rel="stylesheet" href="style.css">
-<style>
-  .prob {
-    display: inline-block;
-    font-size: 0.72em;
-    font-weight: 700;
-    padding: 1px 6px;
-    border-radius: 4px;
-    margin-left: 5px;
-    vertical-align: middle;
-    letter-spacing: 0.03em;
-  }
-  .prob-high   { background: #d4f5dd; color: #1a6630; }   /* ≥95% */
-  .prob-mid    { background: #fff3cc; color: #8a6000; }   /* 80–94% */
-  .prob-low    { background: #ffe0de; color: #9c1f1a; }   /* <80%  */
-</style>
-</head>
-
-<body>
-  <div id="navbar"></div>
-<div class="wrap">
- <h2 class="section-title">Gender Rule — der / die / das <span class="tag tag-a1">A1</span><span class="tag tag-a2">A2</span></h2>
-
-  <div class="card">
-    <h3><span class="tag tag-der">DER — Masculine</span></h3>
-    <h4><span class="tag tag-der">LinguIstic studEnt assistAnt direktOr: ling, ist, ant, ent, är, er, or, eur, ismus, ig, ich, en, us</span></h4>
-    <table>
-    <tr><th>Category</th><th>Rule</th><th>Examples</th><th>Exceptions</th></tr>
-    <tr><td>📅 Days of the week</td><td>All days = der <span class="prob prob-high">100%</span></td><td><span class="de">der Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag, Sonntag</span></td><td>—</td></tr>
-    <tr><td>📆 Months</td><td>All 12 months = der <span class="prob prob-high">100%</span></td><td><span class="de">der Januar, Februar, März … Dezember</span></td><td>—</td></tr>
-    <tr><td>🍂 Seasons</td><td>All 4 seasons = der <span class="prob prob-high">100%</span></td><td><span class="de">der Frühling, Sommer, Herbst, Winter</span></td><td>—</td></tr>
-    <tr><td>🧭 Directions</td><td>Cardinal points = der <span class="prob prob-high">100%</span></td><td><span class="de">der Norden, Süden, Osten, Westen, Südwesten</span></td><td>—</td></tr>
-    <tr><td>🕐 Times of day</td><td>Morning to evening = der <span class="prob prob-high">~95%</span></td><td><span class="de">der Morgen, Mittag, Nachmittag, Abend</span></td><td><span class="de">die Nacht, Mitternacht</span></td></tr>
-    <tr><td>🌧 Weather / precipitation</td><td>Most weather = der <span class="prob prob-mid">~80%</span></td><td><span class="de">der Regen, Schnee, Hagel, Frost, Nebel, Wind, Sturm</span></td><td><span class="de">die Sonne, die Wolke, das Gewitter</span></td></tr>
-    <tr><td>🚗 Car brands</td><td>Brand as car = der <span class="prob prob-high">~98%</span></td><td><span class="de">der BMW, Mercedes, Audi, VW, Porsche, Ferrari, Toyota</span></td><td><span class="de">das Auto</span> (generic word = das)</td></tr>
-    <tr><td>👨 Male people / animals</td><td>Male = der <span class="prob prob-high">~99%</span></td><td><span class="de">der Mann, Vater, Bruder, Arzt, Lehrer, Hund (male), Löwe</span></td><td>—</td></tr>
-    <tr><td>🍷 Alcohol</td><td>Most alcohol = der <span class="prob prob-mid">~85%</span></td><td><span class="de">der Wein, Whisky, Rum, Vodka, Sekt, Schnaps, Gin, Cognac</span></td><td><span class="de"><strong>das Bier!</strong> die Spirituose</span></td></tr>
-    <tr><td>⚙️ Technical objects / machines</td><td>Many devices = der <span class="prob prob-mid">~70%</span></td><td><span class="de">der Computer, Drucker, Motor, Fernseher, Kühlschrank</span></td><td>Many exceptions exist</td></tr>
-    <tr><td>Suffix <span class="de">-ismus</span></td><td>= der <span class="prob prob-high">~99%</span></td><td><span class="de">der Tourismus, Kommunismus, Kapitalismus</span></td><td>—</td></tr>
-    <tr><td>Suffix <span class="de">-eur</span></td><td>= der <span class="prob prob-high">~98%</span></td><td><span class="de">der Friseur, Ingenieur, Chauffeur</span></td><td>—</td></tr>
-    <tr><td>Suffix <span class="de">-ist</span></td><td>= der <span class="prob prob-high">~97%</span></td><td><span class="de">der Optimist, Artist, Tourist</span></td><td><span class="de">die Ärztin, die Journalistin</span> (feminine form)</td></tr>
-    <tr><td>Suffix <span class="de">-ling</span></td><td>= der <span class="prob prob-high">~97%</span></td><td><span class="de">der Lehrling, Schmetterling, Frühling, Flüchtling</span></td><td><span class="de">das Dünkling, das Riesling</span> (rare wine term)</td></tr>
-    <tr><td>Suffix <span class="de">-ant</span></td><td>= der <span class="prob prob-high">~95%</span></td><td><span class="de">der Praktikant, Musikant, Demonstrant</span></td><td><span class="de">das Restaurant, das Croissant</span></td></tr>
-    <tr><td>Suffix <span class="de">-ent</span></td><td>= der <span class="prob prob-high">~95%</span></td><td><span class="de">der Student, Präsident, Dirigent</span></td><td><span class="de">das Talent, das Element, das Experiment</span></td></tr>
-    <tr><td>Suffix <span class="de">-ig</span></td><td>= der <span class="prob prob-high">~95%</span></td><td><span class="de">der Honig, Essig, König</span></td><td><span class="de">das Reisig, das Lustig</span> (nominalised)</td></tr>
-    <tr><td>Suffix <span class="de">-ich</span></td><td>= der <span class="prob prob-high">~90%</span></td><td><span class="de">der Teppich, Pfirsich, Kranich</span></td><td><span class="de">das Reich, das Gesicht</span></td></tr>
-    <tr><td>Suffix <span class="de">-er</span> (agent)</td><td>Person who does = der <span class="prob prob-mid">~90%</span></td><td><span class="de">der Lehrer, Fahrer, Bäcker, Schüler, Arbeiter</span></td><td><span class="de">die Mutter, die Tochter, die Schwester, das Wetter, das Zimmer, das Fenster</span></td></tr>
-    <tr><td>Suffix <span class="de">-or</span></td><td>= der <span class="prob prob-mid">~90%</span></td><td><span class="de">der Doktor, Motor, Autor</span></td><td><span class="de">das Labor, das Tor, das Chlor, das Humor</span></td></tr>
-    <tr><td>Suffix <span class="de">-är</span></td><td>= der <span class="prob prob-mid">~85%</span></td><td><span class="de">der Sekretär, Militär, Aktionär</span></td><td><span class="de">das Militär</span> (institution sense)</td></tr>    
-    <tr><td>Suffix <span class="de">-us</span></td><td>= der <span class="prob prob-mid">~80%</span></td><td><span class="de">der Campus, Zirkus, Rhythmus</span></td><td><span class="de">das Virus, das Opus, das Tempus, das Genus, das Corpus</span></td></tr>
-    <tr><td>Suffix <span class="de">-en</span></td><td>= der <span class="prob prob-mid">~75%</span></td><td><span class="de">der Wagen, Hafen, Besen</span></td><td><span class="de">das Leben, das Essen, das Zeichen, das Wesen, die Hosen</span></td></tr>
-    <tr><td><span class="de">-en</span> removed from some verbs</td><td>= der <span class="prob prob-mid">~80%</span></td><td><span class="de">besuchen → der Besuch, beginnen → der Beginn, verstehen → der Verstand</span></td><td>Verb changes into a masculine noun after removing -en (sometimes with spelling changes).</td></tr>
-  </table>
-  </div>
-
-  <div class="card">
-    <h3><span class="tag tag-die">DIE — Feminine</span></h3>
-    <h4><span class="tag tag-die">heit, keit, schaft, ung, ion, tät, ik, ur, e, ei, ie, enz, anz, falt</span></h4>
-    <table>
-      <tr><th>Category</th><th>Rule</th><th>Examples</th><th>Exceptions</th></tr>
-      <tr><td>🔢 Numbers as nouns</td><td>Spoken/written numbers = die <span class="prob prob-high">~99%</span></td><td><span class="de">die Eins, Zwei, Drei, Zehn, Hundert</span></td><td>—</td></tr>
-      <tr><td>🚢 Ships (named)</td><td>Named ships = die <span class="prob prob-high">~95%</span></td><td><span class="de">die Titanic, Bismarck, Bremen</span></td><td><span class="de">das Schiff</span> (generic)</td></tr>
-      <tr><td>✈️ Aircraft brands</td><td>Brand names = die <span class="prob prob-mid">~85%</span></td><td><span class="de">die Boeing, Concorde, Lufthansa (airline)</span></td><td><span class="de">das Flugzeug</span> (generic)</td></tr>
-      <tr><td>🏍 Motorcycles (brands)</td><td>Bike brands = die <span class="prob prob-mid">~85%</span></td><td><span class="de">die Harley, Kawasaki, Honda</span></td><td><span class="de">das Motorrad</span> (generic), <span class="de">das Fahrrad</span></td></tr>
-      <tr><td>🌸 Most flowers</td><td>= die <span class="prob prob-mid">~90%</span></td><td><span class="de">die Rose, Tulpe, Sonnenblume, Lilie, Orchidee</span></td><td><span class="de">der Kaktus</span></td></tr>
-      <tr><td>🍌 Most fruits</td><td>Individual fruits = die <span class="prob prob-mid">~80%</span></td><td><span class="de">die Banane, Orange, Kirsche, Erdbeere, Zitrone, Traube, Mango, Pflaume</span></td><td><span class="de"><strong>der Apfel</strong>, das Obst (collective)</span></td></tr>
-      <tr><td>🌳 Most trees</td><td>= die <span class="prob prob-mid">~85%</span></td><td><span class="de">die Eiche, Birke, Kiefer, Tanne, Buche, Palme</span></td><td><span class="de">der Baum</span> (generic)</td></tr>
-      <tr><td>Suffix <span class="de">-heit / -keit</span></td><td>= die <span class="prob prob-high">100%</span></td><td><span class="de">die Freiheit, Gesundheit, Möglichkeit, Wirklichkeit</span></td><td>—</td></tr>
-      <tr><td>Suffix <span class="de">-schaft</span></td><td>= die <span class="prob prob-high">100%</span></td><td><span class="de">die Freundschaft, Gesellschaft, Mannschaft, Eigenschaft</span></td><td>—</td></tr>
-      <tr><td>Suffix <span class="de">-falt</span></td><td>= die <span class="prob prob-high">100%</span></td><td><span class="de">die Vielfalt, Einfalt, Dreifaltigkeit</span></td><td>—</td></tr>
-      <tr><td>Suffix <span class="de">-tät / -ität</span></td><td>= die <span class="prob prob-high">100%</span></td><td><span class="de">die Qualität, Universität, Nationalität</span></td><td>—</td></tr>
-      <tr><td>Suffix <span class="de">-ung</span></td><td>= die <span class="prob prob-high">~99%</span></td><td><span class="de">die Wohnung, Zeitung, Meinung, Übung, Lösung</span></td><td>—</td></tr>
-      <tr><td>Suffix <span class="de">-ion / -tion</span></td><td>= die <span class="prob prob-high">~99%</span></td><td><span class="de">die Lektion, Nation, Station, Situation, Information</span></td><td>—</td></tr>
-      <tr><td>Suffix <span class="de">-enz / -anz</span></td><td>= die <span class="prob prob-high">~98%</span></td><td><span class="de">die Konferenz, Toleranz, Relevanz, Distanz</span></td><td>—</td></tr>
-      <tr><td>Suffix <span class="de">-ei</span></td><td>= die <span class="prob prob-high">~96%</span></td><td><span class="de">die Bäckerei, Polizei, Partei</span></td><td><span class="de">das Ei, der Papagei, der Geiz</span></td></tr>
-      <tr><td>Suffix <span class="de">-ie</span></td><td>= die <span class="prob prob-high">~95%</span></td><td><span class="de">die Energie, Demokratie, Komödie, Therapie</span></td><td><span class="de">das Genie, das Knie</span></td></tr>
-      <tr><td>Suffix <span class="de">-ik</span></td><td>= die <span class="prob prob-high">~92%</span></td><td><span class="de">die Musik, Physik, Mathematik, Grafik, Klinik</span></td><td><span class="de">der Atlantik, der Pazifik, der Katholik, der Klassik (genre sense)</span></td></tr>
-      <tr><td>Suffix <span class="de">-ur</span></td><td>= die <span class="prob prob-mid">~88%</span></td><td><span class="de">die Natur, Kultur, Struktur, Literatur</span></td><td><span class="de">der Flur, der Kur (spa), das Dur (music key), der Schwur</span></td></tr>
-      <tr><td>Suffix <span class="de">-e</span></td><td>= die <span class="prob prob-mid">~75%</span></td><td><span class="de">die Lampe, Tasche, Straße</span></td><td><span class="de">der Junge, der Name, der Käse, das Auge, das Ende, das Interesse</span></td></tr>
-    </table>
-  </div>
-
-  <div class="card">
-    <h3><span class="tag tag-das">DAS — Neuter</span></h3>
-    <h4><span class="tag tag-das">chen, lien, ment, tum, ium, um, ett, ma, eau, ing, o, nis</span></h4>
-    <table>
-        <tr><th>Category</th><th>Rule</th><th>Examples</th><th>Exceptions</th></tr>
-        <tr><td>📖 Verb as nouns</td><td>Any infinitive used as noun = das <span class="prob prob-high">100%</span></td><td><span class="de">das Essen, das Schlafen, das Lesen, das Fahren, das Lernen</span></td><td>—</td></tr>
-        <tr><td>💭 Adjectives as nouns (abstract)</td><td>= das <span class="prob prob-high">100%</span></td><td><span class="de">das Gute, das Böse, das Schöne, das Neue, das Beste</span></td><td>—</td></tr>
-        <tr><td>🌍 Languages</td><td>Language names = das <span class="prob prob-high">100%</span></td><td><span class="de">das Deutsch, das Englisch, das Französisch, das Arabisch</span></td><td>(often used without article)</td></tr>
-        <tr><td>🐣 Young animals</td><td>Baby animals = das <span class="prob prob-high">~97%</span></td><td><span class="de">das Küken, das Kalb, das Lamm, das Fohlen, das Ferkel, das Kätzchen</span></td><td>—</td></tr>
-        <tr><td>🔬 Materials (Glass &amp; Metal)</td><td>Raw materials = das <span class="prob prob-high">~95%</span></td><td><span class="de">das Gold, Silber, Eisen, Kupfer, Holz, Plastik, Glas, Papier, Leder</span></td><td>—</td></tr>
-        <tr><td>Suffix <span class="de">-chen / -lein</span> (diminutive)</td><td>ALWAYS das, regardless of base word gender <span class="prob prob-high">100%</span></td><td><span class="de">das Mädchen, das Häuschen, das Büchlein, das Städtchen</span></td><td>—</td></tr>
-        <tr><td>Suffix <span class="de">-ium</span></td><td>= das <span class="prob prob-high">~99%</span></td><td><span class="de">das Studium, das Museum, das Gymnasium</span></td><td>—</td></tr>
-        <tr><td>Suffix <span class="de">-eau</span></td><td>= das <span class="prob prob-high">~95%</span></td><td><span class="de">das Niveau, das Plateau, das Bureau</span></td><td>French-origin nouns ending in <span class="de">-eau</span> are usually neuter; <span class="de">die Château</span> (rare feminine use)</td></tr>
-        <tr><td>Suffix <span class="de">-ett</span></td><td>= das <span class="prob prob-high">~93%</span></td><td><span class="de">das Ballett, das Tablett, das Parkett</span></td><td><span class="de">der Kadett, der Kadett, die Muschel-ett</span></td></tr>
-        <tr><td>Suffix <span class="de">-ment</span></td><td>= das <span class="prob prob-high">~93%</span></td><td><span class="de">das Dokument, Instrument, Apartment, Experiment</span></td><td><span class="de">der Zement, der Moment, der Komment, der Schmerz-ment</span></td></tr>
-        <tr><td>Suffix <span class="de">-tum</span></td><td>= das <span class="prob prob-high">~90%</span></td><td><span class="de">das Eigentum, das Christentum, das Wachstum</span></td><td><span class="de">der Irrtum, der Reichtum, der Wohlstand</span></td></tr>
-        <tr><td>Suffix <span class="de">-um</span></td><td>= das <span class="prob prob-high">~90%</span></td><td><span class="de">das Museum, Datum, Zentrum, Aquarium, Publikum</span></td><td><span class="de">der Irrtum, der Reichtum</span></td></tr>
-        <tr><td>Suffix <span class="de">-ing</span></td><td>= das <span class="prob prob-mid">~85%</span></td><td><span class="de">das Training, das Meeting, das Camping</span></td><td>English -ing loanwords are usually neuter</td></tr>
-        <tr><td>Suffix <span class="de">-o</span></td><td>= das <span class="prob prob-mid">~85%</span></td><td><span class="de">das Auto, das Büro, das Foto</span></td><td><span class="de">die Avocado, die Disco, die Disko, der Euro, der Desperado</span></td></tr>
-        <tr><td>Suffix <span class="de">-ma</span></td><td>= das <span class="prob prob-mid">~80%</span></td><td><span class="de">das Thema, das Klima, das Drama</span></td><td>Greek-origin nouns ending in <span class="de">-ma</span> are usually neuter, but: <span class="de">die Firma, die Oma, die Mama, die Gamma (letter)</span></td></tr>
-        <tr><td>Suffix <span class="de">-nis</span></td><td>mostly das <span class="prob prob-mid">~75%</span></td><td><span class="de">das Ergebnis, Geheimnis, Zeugnis, Erlebnis</span></td><td><span class="de">die Kenntnis, die Erlaubnis, die Finsternis, die Wildnis, die Besorgnis</span></td></tr>
-        <tr><td>Prefix <span class="de">Ge-</span></td><td>= das <span class="prob prob-mid">~75%</span></td><td><span class="de">das Gebirge, das Gebäude, das Gespräch</span></td><td>Many nouns beginning with <span class="de">Ge-</span> are neuter, but: <span class="de">die Gefahr, die Geschichte, die Geburt, der Gedanke, der Gehalt</span></td></tr>
-    </table>
-  </div>
-
-    <div class="card">
-        <h3><span class="tag tag-das">Compound nouns</span></h3>
-        <div class="rule-box">🔑 The golden rule: <strong>Compound nouns always take the gender of the LAST word.</strong><br>
-            <span class="de">die Hand + das Tuch = das Handtuch</span> (towel)<br>
-            <span class="de">das Haus + die Tür = die Haustür</span> (front door)<br>
-            <span class="de">das Haus + der Mann = der Hausmann</span> (househusband)<br>
-            <span class="de">der Schul + das Gebäude = das Schulgebäude</span> (school building)<br>
-            <span class="de">das Stück + das Frühstück = das Frühstück</span> (breakfast)
-        </div>
-    </div>
-</div>  <!-- wrap end -->
-
-<div id="footer"></div>
-<script>
-function load(id, file) {
-  return fetch(file)
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById(id).innerHTML = html;
-    });
-}
-
-load("navbar", "navbar.html")
-  .then(() => {
-    const current = location.pathname.split("/").pop() || "index.html";
-    document.querySelectorAll(".nav-link").forEach(link => {
-      if (link.getAttribute("href") === current) {
-        link.classList.add("active");
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gender</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .prob {
+        display: inline-block;
+        font-size: 0.72em;
+        font-weight: 700;
+        padding: 1px 6px;
+        border-radius: 4px;
+        margin-left: 5px;
+        vertical-align: middle;
+        letter-spacing: 0.03em;
       }
-    });
-  });
+      .prob-high {
+        background: #d4f5dd;
+        color: #1a6630;
+      } /* ≥95% */
+      .prob-mid {
+        background: #fff3cc;
+        color: #8a6000;
+      } /* 80–94% */
+      .prob-low {
+        background: #ffe0de;
+        color: #9c1f1a;
+      } /* <80%  */
+    </style>
+  </head>
 
-load("footer", "footer.html");
-</script>
-</body>
+  <body>
+    <div id="navbar"></div>
+    <div class="wrap">
+      <h2 class="section-title">
+        Gender Rule — der / die / das <span class="tag tag-a1">A1</span
+        ><span class="tag tag-a2">A2</span>
+      </h2>
+
+      <div class="card">
+        <h3><span class="tag tag-der">DER — Masculine</span></h3>
+        <h4>
+          <span class="tag tag-der"
+            >LinguIstic studEnt assistAnt direktOr: ling, ist, ant, ent, är, er,
+            or, eur, ismus, ig, ich, en, us</span
+          >
+        </h4>
+        <table>
+          <tr>
+            <th>Category</th>
+            <th>Rule</th>
+            <th>Examples</th>
+            <th>Exceptions</th>
+          </tr>
+          <tr>
+            <td>📅 Days of the week</td>
+            <td>All days = der <span class="prob prob-high">100%</span></td>
+            <td>
+              <span class="de"
+                >der Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag,
+                Sonntag</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>📆 Months</td>
+            <td>
+              All 12 months = der <span class="prob prob-high">100%</span>
+            </td>
+            <td>
+              <span class="de">der Januar, Februar, März … Dezember</span>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🍂 Seasons</td>
+            <td>
+              All 4 seasons = der <span class="prob prob-high">100%</span>
+            </td>
+            <td>
+              <span class="de">der Frühling, Sommer, Herbst, Winter</span>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🧭 Directions</td>
+            <td>
+              Cardinal points = der <span class="prob prob-high">100%</span>
+            </td>
+            <td>
+              <span class="de"
+                >der Norden, Süden, Osten, Westen, Südwesten</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🕐 Times of day</td>
+            <td>
+              Morning to evening = der <span class="prob prob-high">~95%</span>
+            </td>
+            <td>
+              <span class="de">der Morgen, Mittag, Nachmittag, Abend</span>
+            </td>
+            <td><span class="de">die Nacht, Mitternacht</span></td>
+          </tr>
+          <tr>
+            <td>🌧 Weather / precipitation</td>
+            <td>Most weather = der <span class="prob prob-mid">~80%</span></td>
+            <td>
+              <span class="de"
+                >der Regen, Schnee, Hagel, Frost, Nebel, Wind, Sturm</span
+              >
+            </td>
+            <td><span class="de">die Sonne, die Wolke, das Gewitter</span></td>
+          </tr>
+          <tr>
+            <td>🚗 Car brands</td>
+            <td>Brand as car = der <span class="prob prob-high">~98%</span></td>
+            <td>
+              <span class="de"
+                >der BMW, Mercedes, Audi, VW, Porsche, Ferrari, Toyota</span
+              >
+            </td>
+            <td><span class="de">das Auto</span> (generic word = das)</td>
+          </tr>
+          <tr>
+            <td>👨 Male people / animals</td>
+            <td>Male = der <span class="prob prob-high">~99%</span></td>
+            <td>
+              <span class="de"
+                >der Mann, Vater, Bruder, Arzt, Lehrer, Hund (male), Löwe</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🍷 Alcohol</td>
+            <td>Most alcohol = der <span class="prob prob-mid">~85%</span></td>
+            <td>
+              <span class="de"
+                >der Wein, Whisky, Rum, Vodka, Sekt, Schnaps, Gin, Cognac</span
+              >
+            </td>
+            <td>
+              <span class="de"><strong>das Bier!</strong> die Spirituose</span>
+            </td>
+          </tr>
+          <tr>
+            <td>⚙️ Technical objects / machines</td>
+            <td>Many devices = der <span class="prob prob-mid">~70%</span></td>
+            <td>
+              <span class="de"
+                >der Computer, Drucker, Motor, Fernseher, Kühlschrank</span
+              >
+            </td>
+            <td>Many exceptions exist</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ismus</span></td>
+            <td>= der <span class="prob prob-high">~99%</span></td>
+            <td>
+              <span class="de">der Tourismus, Kommunismus, Kapitalismus</span>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-eur</span></td>
+            <td>= der <span class="prob prob-high">~98%</span></td>
+            <td><span class="de">der Friseur, Ingenieur, Chauffeur</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ist</span></td>
+            <td>= der <span class="prob prob-high">~97%</span></td>
+            <td><span class="de">der Optimist, Artist, Tourist</span></td>
+            <td>
+              <span class="de">die Ärztin, die Journalistin</span> (feminine
+              form)
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ling</span></td>
+            <td>= der <span class="prob prob-high">~97%</span></td>
+            <td>
+              <span class="de"
+                >der Lehrling, Schmetterling, Frühling, Flüchtling</span
+              >
+            </td>
+            <td>
+              <span class="de">das Dünkling, das Riesling</span> (rare wine
+              term)
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ant</span></td>
+            <td>= der <span class="prob prob-high">~95%</span></td>
+            <td>
+              <span class="de">der Praktikant, Musikant, Demonstrant</span>
+            </td>
+            <td><span class="de">das Restaurant, das Croissant</span></td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ent</span></td>
+            <td>= der <span class="prob prob-high">~95%</span></td>
+            <td><span class="de">der Student, Präsident, Dirigent</span></td>
+            <td>
+              <span class="de">das Talent, das Element, das Experiment</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ig</span></td>
+            <td>= der <span class="prob prob-high">~95%</span></td>
+            <td><span class="de">der Honig, Essig, König</span></td>
+            <td>
+              <span class="de">das Reisig, das Lustig</span> (nominalised)
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ich</span></td>
+            <td>= der <span class="prob prob-high">~90%</span></td>
+            <td><span class="de">der Teppich, Pfirsich, Kranich</span></td>
+            <td><span class="de">das Reich, das Gesicht</span></td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-er</span> (agent)</td>
+            <td>
+              Person who does = der <span class="prob prob-mid">~90%</span>
+            </td>
+            <td>
+              <span class="de"
+                >der Lehrer, Fahrer, Bäcker, Schüler, Arbeiter</span
+              >
+            </td>
+            <td>
+              <span class="de"
+                >die Mutter, die Tochter, die Schwester, das Wetter, das Zimmer,
+                das Fenster</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-or</span></td>
+            <td>= der <span class="prob prob-mid">~90%</span></td>
+            <td><span class="de">der Doktor, Motor, Autor</span></td>
+            <td>
+              <span class="de">das Labor, das Tor, das Chlor, das Humor</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-är</span></td>
+            <td>= der <span class="prob prob-mid">~85%</span></td>
+            <td><span class="de">der Sekretär, Militär, Aktionär</span></td>
+            <td><span class="de">das Militär</span> (institution sense)</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-us</span></td>
+            <td>= der <span class="prob prob-mid">~80%</span></td>
+            <td><span class="de">der Campus, Zirkus, Rhythmus</span></td>
+            <td>
+              <span class="de"
+                >das Virus, das Opus, das Tempus, das Genus, das Corpus</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-en</span></td>
+            <td>= der <span class="prob prob-mid">~75%</span></td>
+            <td><span class="de">der Wagen, Hafen, Besen</span></td>
+            <td>
+              <span class="de"
+                >das Leben, das Essen, das Zeichen, das Wesen, die Hosen</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td><span class="de">-en</span> removed from some verbs</td>
+            <td>= der <span class="prob prob-mid">~80%</span></td>
+            <td>
+              <span class="de"
+                >besuchen → der Besuch, beginnen → der Beginn, verstehen → der
+                Verstand</span
+              >
+            </td>
+            <td>
+              Verb changes into a masculine noun after removing -en (sometimes
+              with spelling changes).
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="tag tag-die">DIE — Feminine</span></h3>
+        <h4>
+          <span class="tag tag-die"
+            >heit, keit, schaft, ung, ion, tät, ik, ur, e, ei, ie, enz, anz,
+            falt</span
+          >
+        </h4>
+        <table>
+          <tr>
+            <th>Category</th>
+            <th>Rule</th>
+            <th>Examples</th>
+            <th>Exceptions</th>
+          </tr>
+          <tr>
+            <td>🔢 Numbers as nouns</td>
+            <td>
+              Spoken/written numbers = die
+              <span class="prob prob-high">~99%</span>
+            </td>
+            <td><span class="de">die Eins, Zwei, Drei, Zehn, Hundert</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🚢 Ships (named)</td>
+            <td>Named ships = die <span class="prob prob-high">~95%</span></td>
+            <td><span class="de">die Titanic, Bismarck, Bremen</span></td>
+            <td><span class="de">das Schiff</span> (generic)</td>
+          </tr>
+          <tr>
+            <td>✈️ Aircraft brands</td>
+            <td>Brand names = die <span class="prob prob-mid">~85%</span></td>
+            <td>
+              <span class="de">die Boeing, Concorde, Lufthansa (airline)</span>
+            </td>
+            <td><span class="de">das Flugzeug</span> (generic)</td>
+          </tr>
+          <tr>
+            <td>🏍 Motorcycles (brands)</td>
+            <td>Bike brands = die <span class="prob prob-mid">~85%</span></td>
+            <td><span class="de">die Harley, Kawasaki, Honda</span></td>
+            <td>
+              <span class="de">das Motorrad</span> (generic),
+              <span class="de">das Fahrrad</span>
+            </td>
+          </tr>
+          <tr>
+            <td>🌸 Most flowers</td>
+            <td>= die <span class="prob prob-mid">~90%</span></td>
+            <td>
+              <span class="de"
+                >die Rose, Tulpe, Sonnenblume, Lilie, Orchidee</span
+              >
+            </td>
+            <td><span class="de">der Kaktus</span></td>
+          </tr>
+          <tr>
+            <td>🍌 Most fruits</td>
+            <td>
+              Individual fruits = die <span class="prob prob-mid">~80%</span>
+            </td>
+            <td>
+              <span class="de"
+                >die Banane, Orange, Kirsche, Erdbeere, Zitrone, Traube, Mango,
+                Pflaume</span
+              >
+            </td>
+            <td>
+              <span class="de"
+                ><strong>der Apfel</strong>, das Obst (collective)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>🌳 Most trees</td>
+            <td>= die <span class="prob prob-mid">~85%</span></td>
+            <td>
+              <span class="de"
+                >die Eiche, Birke, Kiefer, Tanne, Buche, Palme</span
+              >
+            </td>
+            <td><span class="de">der Baum</span> (generic)</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-heit / -keit</span></td>
+            <td>= die <span class="prob prob-high">100%</span></td>
+            <td>
+              <span class="de"
+                >die Freiheit, Gesundheit, Möglichkeit, Wirklichkeit</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-schaft</span></td>
+            <td>= die <span class="prob prob-high">100%</span></td>
+            <td>
+              <span class="de"
+                >die Freundschaft, Gesellschaft, Mannschaft, Eigenschaft</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-falt</span></td>
+            <td>= die <span class="prob prob-high">100%</span></td>
+            <td>
+              <span class="de">die Vielfalt, Einfalt, Dreifaltigkeit</span>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-tät / -ität</span></td>
+            <td>= die <span class="prob prob-high">100%</span></td>
+            <td>
+              <span class="de">die Qualität, Universität, Nationalität</span>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ung</span></td>
+            <td>= die <span class="prob prob-high">~99%</span></td>
+            <td>
+              <span class="de"
+                >die Wohnung, Zeitung, Meinung, Übung, Lösung</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ion / -tion</span></td>
+            <td>= die <span class="prob prob-high">~99%</span></td>
+            <td>
+              <span class="de"
+                >die Lektion, Nation, Station, Situation, Information</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-enz / -anz</span></td>
+            <td>= die <span class="prob prob-high">~98%</span></td>
+            <td>
+              <span class="de">die Konferenz, Toleranz, Relevanz, Distanz</span>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ei</span></td>
+            <td>= die <span class="prob prob-high">~96%</span></td>
+            <td><span class="de">die Bäckerei, Polizei, Partei</span></td>
+            <td><span class="de">das Ei, der Papagei, der Geiz</span></td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ie</span></td>
+            <td>= die <span class="prob prob-high">~95%</span></td>
+            <td>
+              <span class="de">die Energie, Demokratie, Komödie, Therapie</span>
+            </td>
+            <td><span class="de">das Genie, das Knie</span></td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ik</span></td>
+            <td>= die <span class="prob prob-high">~92%</span></td>
+            <td>
+              <span class="de"
+                >die Musik, Physik, Mathematik, Grafik, Klinik</span
+              >
+            </td>
+            <td>
+              <span class="de"
+                >der Atlantik, der Pazifik, der Katholik, der Klassik (genre
+                sense)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ur</span></td>
+            <td>= die <span class="prob prob-mid">~88%</span></td>
+            <td>
+              <span class="de">die Natur, Kultur, Struktur, Literatur</span>
+            </td>
+            <td>
+              <span class="de"
+                >der Flur, der Kur (spa), das Dur (music key), der Schwur</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-e</span></td>
+            <td>= die <span class="prob prob-mid">~75%</span></td>
+            <td><span class="de">die Lampe, Tasche, Straße</span></td>
+            <td>
+              <span class="de"
+                >der Junge, der Name, der Käse, das Auge, das Ende, das
+                Interesse</span
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="tag tag-das">DAS — Neuter</span></h3>
+        <h4>
+          <span class="tag tag-das"
+            >chen, lien, ment, tum, ium, um, ett, ma, eau, ing, o, nis</span
+          >
+        </h4>
+        <table>
+          <tr>
+            <th>Category</th>
+            <th>Rule</th>
+            <th>Examples</th>
+            <th>Exceptions</th>
+          </tr>
+          <tr>
+            <td>📖 Verb as nouns</td>
+            <td>
+              Any infinitive used as noun = das
+              <span class="prob prob-high">100%</span>
+            </td>
+            <td>
+              <span class="de"
+                >das Essen, das Schlafen, das Lesen, das Fahren, das
+                Lernen</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>💭 Adjectives as nouns (abstract)</td>
+            <td>= das <span class="prob prob-high">100%</span></td>
+            <td>
+              <span class="de"
+                >das Gute, das Böse, das Schöne, das Neue, das Beste</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🌍 Languages</td>
+            <td>
+              Language names = das <span class="prob prob-high">100%</span>
+            </td>
+            <td>
+              <span class="de"
+                >das Deutsch, das Englisch, das Französisch, das Arabisch</span
+              >
+            </td>
+            <td>(often used without article)</td>
+          </tr>
+          <tr>
+            <td>🐣 Young animals</td>
+            <td>Baby animals = das <span class="prob prob-high">~97%</span></td>
+            <td>
+              <span class="de"
+                >das Küken, das Kalb, das Lamm, das Fohlen, das Ferkel, das
+                Kätzchen</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>🔬 Materials (Glass &amp; Metal)</td>
+            <td>
+              Raw materials = das <span class="prob prob-high">~95%</span>
+            </td>
+            <td>
+              <span class="de"
+                >das Gold, Silber, Eisen, Kupfer, Holz, Plastik, Glas, Papier,
+                Leder</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-chen / -lein</span> (diminutive)</td>
+            <td>
+              ALWAYS das, regardless of base word gender
+              <span class="prob prob-high">100%</span>
+            </td>
+            <td>
+              <span class="de"
+                >das Mädchen, das Häuschen, das Büchlein, das Städtchen</span
+              >
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ium</span></td>
+            <td>= das <span class="prob prob-high">~99%</span></td>
+            <td>
+              <span class="de">das Studium, das Museum, das Gymnasium</span>
+            </td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-eau</span></td>
+            <td>= das <span class="prob prob-high">~95%</span></td>
+            <td><span class="de">das Niveau, das Plateau, das Bureau</span></td>
+            <td>
+              French-origin nouns ending in <span class="de">-eau</span> are
+              usually neuter; <span class="de">die Château</span> (rare feminine
+              use)
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ett</span></td>
+            <td>= das <span class="prob prob-high">~93%</span></td>
+            <td>
+              <span class="de">das Ballett, das Tablett, das Parkett</span>
+            </td>
+            <td>
+              <span class="de">der Kadett, der Kadett, die Muschel-ett</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ment</span></td>
+            <td>= das <span class="prob prob-high">~93%</span></td>
+            <td>
+              <span class="de"
+                >das Dokument, Instrument, Apartment, Experiment</span
+              >
+            </td>
+            <td>
+              <span class="de"
+                >der Zement, der Moment, der Komment, der Schmerz-ment</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-tum</span></td>
+            <td>= das <span class="prob prob-high">~90%</span></td>
+            <td>
+              <span class="de"
+                >das Eigentum, das Christentum, das Wachstum</span
+              >
+            </td>
+            <td>
+              <span class="de">der Irrtum, der Reichtum, der Wohlstand</span>
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-um</span></td>
+            <td>= das <span class="prob prob-high">~90%</span></td>
+            <td>
+              <span class="de"
+                >das Museum, Datum, Zentrum, Aquarium, Publikum</span
+              >
+            </td>
+            <td><span class="de">der Irrtum, der Reichtum</span></td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ing</span></td>
+            <td>= das <span class="prob prob-mid">~85%</span></td>
+            <td>
+              <span class="de">das Training, das Meeting, das Camping</span>
+            </td>
+            <td>English -ing loanwords are usually neuter</td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-o</span></td>
+            <td>= das <span class="prob prob-mid">~85%</span></td>
+            <td><span class="de">das Auto, das Büro, das Foto</span></td>
+            <td>
+              <span class="de"
+                >die Avocado, die Disco, die Disko, der Euro, der
+                Desperado</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-ma</span></td>
+            <td>= das <span class="prob prob-mid">~80%</span></td>
+            <td><span class="de">das Thema, das Klima, das Drama</span></td>
+            <td>
+              Greek-origin nouns ending in <span class="de">-ma</span> are
+              usually neuter, but:
+              <span class="de"
+                >die Firma, die Oma, die Mama, die Gamma (letter)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Suffix <span class="de">-nis</span></td>
+            <td>mostly das <span class="prob prob-mid">~75%</span></td>
+            <td>
+              <span class="de">das Ergebnis, Geheimnis, Zeugnis, Erlebnis</span>
+            </td>
+            <td>
+              <span class="de"
+                >die Kenntnis, die Erlaubnis, die Finsternis, die Wildnis, die
+                Besorgnis</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>Prefix <span class="de">Ge-</span></td>
+            <td>= das <span class="prob prob-mid">~75%</span></td>
+            <td>
+              <span class="de">das Gebirge, das Gebäude, das Gespräch</span>
+            </td>
+            <td>
+              Many nouns beginning with <span class="de">Ge-</span> are neuter,
+              but:
+              <span class="de"
+                >die Gefahr, die Geschichte, die Geburt, der Gedanke, der
+                Gehalt</span
+              >
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3><span class="tag tag-das">Compound nouns</span></h3>
+        <div class="rule-box">
+          🔑 The golden rule:
+          <strong
+            >Compound nouns always take the gender of the LAST word.</strong
+          ><br />
+          <span class="de">die Hand + das Tuch = das Handtuch</span>
+          (towel)<br />
+          <span class="de">das Haus + die Tür = die Haustür</span> (front
+          door)<br />
+          <span class="de">das Haus + der Mann = der Hausmann</span>
+          (househusband)<br />
+          <span class="de">der Schul + das Gebäude = das Schulgebäude</span>
+          (school building)<br />
+          <span class="de">das Stück + das Frühstück = das Frühstück</span>
+          (breakfast)
+        </div>
+      </div>
+    </div>
+    <!-- wrap end -->
+
+    <div id="footer"></div>
+    <script>
+      function load(id, file) {
+        return fetch(file)
+          .then((res) => res.text())
+          .then((html) => {
+            document.getElementById(id).innerHTML = html;
+          });
+      }
+
+      load("navbar", "navbar.html").then(() => {
+        const current = location.pathname.split("/").pop() || "index.html";
+        document.querySelectorAll(".nav-link").forEach((link) => {
+          if (link.getAttribute("href") === current) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      load("footer", "footer.html");
+    </script>
+    <script src="script.js?v=1.0"></script>
+  </body>
 </html>
