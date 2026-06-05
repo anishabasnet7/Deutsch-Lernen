@@ -1,6 +1,6 @@
-const CACHE_NAME = "german-app-v3"; // Incremented to force update
+const CACHE_NAME = "german-app-v3";
 
-const urlsToCache = [
+const STATIC_ASSETS = [
   "./",
   "index.html",
   "article.html",
@@ -24,32 +24,79 @@ const urlsToCache = [
   "icon.png"
 ];
 
+// ----------------------
+// INSTALL
+// ----------------------
 self.addEventListener("install", event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(urlsToCache);
-    }).then(() => self.skipWaiting()) // Forces the waiting service worker to become active
+      return cache.addAll(STATIC_ASSETS);
+    })
   );
+
+  // Activate new SW immediately (does NOT take control yet)
+  self.skipWaiting();
 });
 
+// ----------------------
+// ACTIVATE
+// ----------------------
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
+    caches.keys().then(keys => {
       return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== CACHE_NAME) {
-            return caches.delete(cache); // Delete old caches
+        keys.map(key => {
+          if (key !== CACHE_NAME) {
+            return caches.delete(key);
           }
         })
       );
-    }).then(() => self.clients.claim()) // Takes control of open pages immediately
+    })
   );
+
+  // Take control of all pages immediately
+  self.clients.claim();
 });
 
+// ----------------------
+// MESSAGE (for update button)
+// ----------------------
+self.addEventListener("message", event => {
+  if (event.data && event.data.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
+});
+
+// ----------------------
+// FETCH STRATEGY
+// ----------------------
 self.addEventListener("fetch", event => {
+  const request = event.request;
+  const url = new URL(request.url);
+
+  // 1. HTML → network first (always get latest version)
+  if (request.mode === "navigate" || url.pathname.endsWith(".html")) {
+    event.respondWith(
+      fetch(request).catch(() => caches.match(request))
+    );
+    return;
+  }
+
+  // 2. Static assets → cache first, fallback to network
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
+    caches.match(request).then(cached => {
+      if (cached) return cached;
+
+      return fetch(request).then(networkResponse => {
+        return caches.open(CACHE_NAME).then(cache => {
+          cache.put(request, networkResponse.clone());
+          return networkResponse;
+        });
+
+      }).catch(() => {
+        // offline fallback (optional safety)
+        return caches.match("./");
+      });
     })
   );
 });
