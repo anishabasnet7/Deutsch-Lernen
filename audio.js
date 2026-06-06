@@ -36,7 +36,7 @@ window.addEventListener("load", function() {
         
         btn.onclick = async function() {
             window.speechSynthesis.cancel();
-            const germanWords = document.querySelectorAll("td.de");
+            const germanWords = document.querySelectorAll(".de");
             for (const cell of germanWords) {
                 await speakWord(cell.innerText, cell);
             }
@@ -44,7 +44,7 @@ window.addEventListener("load", function() {
         document.body.appendChild(btn);
 
         // 2. Make individual words clickable
-        document.querySelectorAll('td.de').forEach(item => {
+        document.querySelectorAll('.de').forEach(item => {
             item.style.cursor = "pointer";
             item.style.textDecoration = "underline";
             item.title = "Click to hear pronunciation";
