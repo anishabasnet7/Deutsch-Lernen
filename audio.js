@@ -32,7 +32,7 @@ window.addEventListener("load", function() {
         // 1. Create the master button
         const btn = document.createElement("button");
         btn.innerText = "🔊 Read all with 2s pause";
-        btn.style.cssText = "position: fixed; top: 10px; right: 10px; z-index: 9999; padding: 10px; cursor: pointer; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px;";
+        btn.style.cssText = "position: fixed; top: 50px; right: 10px; z-index: 9999; padding: 10px; cursor: pointer; background: #f0f0f0; border: 1px solid #ccc; border-radius: 4px;";
         
         btn.onclick = async function() {
             window.speechSynthesis.cancel();
